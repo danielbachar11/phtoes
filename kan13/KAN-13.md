@@ -11,7 +11,7 @@ deploy nginx website on local k8 for 2 diffrent enviornment
 - **Step 2**: create piple that build and push image to dev environment
 - **step 3**: create piple that build and push image to prod environment   
 - **step 4**:deploy our image on kubernetes
-- **deploy prod image to prod name space kubernetes:**  
+- **step 5**:deploy prod image to prod name space kubernetes:**   
 
 
 
