@@ -34,7 +34,7 @@ deploy nginx website on local k8 for 2 diffrent enviornment
 2. **create piple that build and push image to dev environment:**
 
 now lets create pipline that build and push dev image and the trigger is only when change occur in this path "images/custom-nginx" and the pipline will run on any branch in push 
-
+```bash
 on:
  push:
   
@@ -57,11 +57,12 @@ jobs:
           cd images/custom-nginx
           docker build -t danielbachar/nginx_website:latest_dev_image . 
           ocker push danielbachar/nginx_website:latest_dev_image
+```
           
 
 3. **create piple that build and push image to prod environment:**
 now lets create pipline that build and push prod image and the trigger is only when change occur in this path "images/custom-nginx" and the pipline will run only on main branch in push  
-
+```bash
 `name: build and push to docker hub for prod
 
 on:
@@ -88,6 +89,7 @@ jobs:
           docker build -t danielbachar/nginx_website:latest_prod image .
           
           docker push danielbachar/nginx_website:latest_prod image
+```
 
 4. **deploy dev image to dev name space kubernetes:**  
 
@@ -113,7 +115,7 @@ deploy our deployment with pipline on push to any branch only when chaged occur 
 
 'kubernetes/local-cluster/dev**' 
 
-
+```bash
 name: deploy nginx  to dev namespace 
 
 on:
@@ -138,7 +140,8 @@ jobs:
       - name: use context 
         run: |
          kubectl config use-context kind-daniel 
-         kubectl apply -f kubernetes/local-cluster/dev 
+         kubectl apply -f kubernetes/local-cluster/dev
+```
 now to see our pod lets run
 ```bash
 kubectl -n dev get pod          
@@ -149,7 +152,7 @@ kubectl -n dev get pod
 5. **deploy prod image to prod name space kubernetes:**  
 
 lets deploy our prod image to prod name space on push only in main branch 
-
+```bash
 name: deploy nginx to prod namespace 
 
 on:
@@ -177,7 +180,7 @@ jobs:
         run: |
          kubectl config use-context kind-daniel 
          kubectl apply -f kubernetes/local-cluster/prod
-
+```
 now to see our pod lets run
 ```bash
 kubectl -n prod get pod          
