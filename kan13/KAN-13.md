@@ -7,11 +7,11 @@ deploy nginx website on local k8 for 2 diffrent enviornment
 
 ## Steps 
 
-- **Step 1**:create in kubernetes 2 name space
+- **Step 1**: create in kubernetes 2 name space
 - **Step 2**: create piple that build and push image to dev environment
 - **step 3**: create piple that build and push image to prod environment   
-- **step 4**:deploy our image on kubernetes
-- **step 5**:deploy prod image to prod name space kubernetes:**   
+- **step 4**: deploy our image on kubernetes
+- **step 5**: deploy prod image to prod name space kubernetes:**   
 
 
 
@@ -198,7 +198,7 @@ now go to web browser and type localhost:8083
 
 now we can see our website 
 
-!(our website)[https://github.com/danielbachar11/phtoes/blob/main/kan13/portforward-website.png]
+![https://github.com/danielbachar11/phtoes/blob/main/kan13/portforward-website.png]
 
 
 
