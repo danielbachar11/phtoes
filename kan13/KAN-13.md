@@ -198,7 +198,7 @@ now go to web browser and type localhost:8083
 
 now we can see our website 
 
-![https://github.com/danielbachar11/phtoes/blob/main/kan13/portforward-website.png]
+![port-forwarding](https://github.com/danielbachar11/phtoes/blob/main/kan13/portforward-website.png)
 
 
 
