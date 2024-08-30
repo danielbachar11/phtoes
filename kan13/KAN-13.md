@@ -35,6 +35,7 @@ deploy nginx website on local k8 for 2 diffrent enviornment
 
 now lets create pipline that build and push dev image and the trigger is only when change occur in this path "images/custom-nginx" and the pipline will run on any branch in push 
 ```bash
+name: build and push nginx website 
 on:
  push:
   
